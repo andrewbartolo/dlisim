@@ -1,0 +1,359 @@
+spacer line
+# LD_LIBRARY_PATH=. ./nvdla_runtime --loadable flatbufs/CONV/CONV_D_L0_0_fbuf
+creating new runtime context...
+Emulator starting
+submitting tasks...
+[10220.969366] Enter:dla_read_network_config
+[10220.971038] *********************************************************
+[10220.971444] NVDLA FW dla_network_desc
+[10220.971669] ---------------------------------------------------------
+[10220.971980] op desc index      = 1
+[10220.972189] surface desc index = 2
+[10220.972404] dep graph index    = 3
+[10220.972610] lut data index     = -1
+[10220.972850] stat_list_index    = -1
+[10220.973099] roi array index    = -1
+[10220.973339] surface index      = -1
+[10220.973582] num rois           = 1
+[10220.975895] num ops            = 2
+[10220.976130] num luts           = 0
+[10220.976354] num addr           = 7
+[10220.976583] input layer        = 0
+[10220.976804] dynamic roi        = 0
+[10220.977017] Exit:dla_read_network_config status=0
+[10220.977314] *********************************************************
+[10220.977638] NVDLA FW address list
+[10220.979427] ---------------------------------------------------------
+[10220.979812] task base address        = 0
+[10220.980085] op desc address          = 1
+[10220.980346] surface desc address     = 2
+[10220.980616] dependency graph address = 3
+[10220.980878] LUT data address         = 4
+[10220.981090] stat address             = 0
+[10220.981302] ROI array address        = 0
+[10220.981541] surface address          = 0
+[10220.983436] Enter: dla_initiate_processors
+[10220.983981] Enter: dla_submit_operation
+[10220.984248] Prepare Convolution operation index 0 ROI 0 dep_count 1
+[10220.984642] Enter: dla_prepare_operation
+[10220.984987] processor:Convolution group:0, rdma_group:0 available
+[10220.985376] Enter: dla_read_config
+[10220.991029] *********************************************************
+[10220.991462] NVDLA FW ROI[0]: dla_conv_surface_desc
+[10220.991777] ---------------------------------------------------------
+[10220.992168] weight_data         = [ dla_data_cube =>
+[10220.992496]     type          = 0
+[10220.992726]     address       = 4
+[10220.992961]     width         = 3
+[10220.993212]     height        = 3
+[10220.993431]     channel       = 80
+[10220.993648]     size          = 73728
+[10220.995514]     line_stride   = 0
+[10220.995758]     surf_stride   = 0
+[10220.995986]     plane_stride  = 0
+[10220.996195] ]
+[10220.996211] wmb_data            = [ dla_data_cube =>
+[10220.996572]     type          = 2
+[10220.996765]     address       = -1
+[10220.996989]     width         = 0
+[10220.997231]     height        = 0
+[10220.997464]     channel       = 0
+[10220.997706]     size          = 0
+[10220.999778]     line_stride   = 0
+[10221.000025]     surf_stride   = 0
+[10221.000215]     plane_stride  = 0
+[10221.000419] ]
+[10221.000436] wgs_data            = [ dla_data_cube =>
+[10221.000825]     type          = 2
+[10221.001044]     address       = -1
+[10221.001283]     width         = 0
+[10221.001515]     height        = 0
+[10221.003337]     channel       = 0
+[10221.003596]     size          = 0
+[10221.003833]     line_stride   = 0
+[10221.004066]     surf_stride   = 0
+[10221.004295]     plane_stride  = 0
+[10221.004515] ]
+[10221.004529] src_data            = [ dla_data_cube =>
+[10221.004981]     type          = 0
+[10221.005203]     address       = 5
+[10221.005408]     width         = 8
+[10221.005627]     height        = 8
+[10221.007577]     channel       = 80
+[10221.007784]     size          = 16384
+[10221.008023]     line_stride   = 256
+[10221.008266]     surf_stride   = 2048
+[10221.008490]     plane_stride  = 0
+[10221.008714] ]
+[10221.008728] dst_data            = [ dla_data_cube =>
+[10221.009171]     type          = 2
+[10221.009408]     address       = -1
+[10221.009643]     width         = 8
+[10221.011543]     height        = 8
+[10221.011803]     channel       = 20
+[10221.012044]     size          = 0
+[10221.012273]     line_stride   = 0
+[10221.012503]     surf_stride   = 0
+[10221.012736]     plane_stride  = 0
+[10221.012966] ]
+[10221.012982] offset_u            = 0
+[10221.013335] in_line_uv_stride   = 0
+[10221.013574] *********************************************************
+[10221.015600] NVDLA FW ROI[0]: dla_conv_op_desc
+[10221.015868] ---------------------------------------------------------
+[10221.016183] conv_mode          = 0
+[10221.016397] data_reuse         = 0
+[10221.016607] weight_reuse       = 0
+[10221.016834] skip_data_rls      = 1
+[10221.017070] skip_weight_rls    = 1
+[10221.017320] entry_per_slice    = 16
+[10221.017536] data_format        = 36
+[10221.017733] pixel_mapping      = 0
+[10221.019627] fetch_grain        = 8
+[10221.019858] batch              = 1
+[10221.020060] weight_format      = 0
+[10221.020277] data_bank          = 4
+[10221.020499] weight_bank        = 4
+[10221.020695] batch_stride       = 0
+[10221.020917] post_extension     = 0
+[10221.021161] pixel_override     = 0
+[10221.021355] release            = 1
+[10221.021564] input_width_csc    = 8
+[10221.023468] input_height_csc   = 8
+[10221.023713] input_channel_csc  = 128
+[10221.023910] kernel_width_csc   = 3
+[10221.024110] kernel_height_csc  = 3
+[10221.024306] kernel_channel_csc = 128
+[10221.024510] input_width_cmac   = 8
+[10221.024696] input_height_cmac  = 8
+[10221.024881] bytes_per_kernel   = 2304
+[10221.025093] mean_ry            = 0
+[10221.025315] mean_gu            = 0
+[10221.025519] mean_bv            = 0
+[10221.025744] mean_ax            = 0
+[10221.028079] mean_format        = 0
+[10221.028294] conv_stride_x      = 1
+[10221.028550] conv_stride_y      = 1
+[10221.028751] pad_x_left         = 1
+[10221.028969] pad_x_right        = 1
+[10221.029168] pad_y_top          = 1
+[10221.029360] pad_y_bottom       = 1
+[10221.029557] dilation_x         = 1
+[10221.031237] dilation_y         = 1
+[10221.031455] pra_truncate       = 0
+[10221.031657] in_precision       = 1
+[10221.031910] out_precision      = 1
+[10221.032155] pad_val            = 0
+[10221.032386] in_cvt             =
+[10221.032622] [ scale = 0, truncate = 0, enable = 0, offset = 0 ]
+[10221.032993] out_cvt            =
+[10221.033233] [ scale = 1, truncate = 0, enable = 1, offset = 0 ]
+[10221.033588] Exit: dla_read_config
+[10221.035488] Exit: dla_prepare_operation status=0
+[10221.035832] Enter: dla_program_operation
+[10221.036114] Program Convolution operation index 0 ROI 0 Group[0]
+[10221.038944] no desc get due to index==-1
+[10221.040277] no desc get due to index==-1
+[10221.040774] no desc get due to index==-1
+[10221.041022] no desc get due to index==-1
+[10221.041282] no desc get due to index==-1
+[10221.041555] no desc get due to index==-1
+[10221.044037] Enter: dla_op_programmed
+[10221.044315] Update dependency operation index 1 ROI 0 DEP_COUNT=1
+[10221.044624] enable SDP in dla_update_dependency as depdency are resolved
+[10221.044960] Enter: dla_enable_operation
+[10221.045215] exit dla_enable_operation without actual enable due to processor hasn't been pro
+grammed
+[10221.045726] Exit: dla_enable_operation status=0
+[10221.047329] Exit: dla_op_programmed
+[10221.047561] Exit: dla_program_operation status=0
+[10221.047816] Exit: dla_submit_operation
+[10221.048040] Enter: dla_dequeue_operation
+[10221.048266] exit Convolution as there's no further operation
+[10221.048588] Exit: dla_dequeue_operation
+[10221.048845] Enter: dla_submit_operation
+[10221.049118] Prepare SDP operation index 1 ROI 0 dep_count 0
+[10221.049450] Enter: dla_prepare_operation
+[10221.051351] processor:SDP group:1, rdma_group:1 available
+[10221.051652] Enter: dla_read_config
+[10221.056637] *********************************************************
+[10221.057066] NVDLA FW ROI[0]: dla_sdp_surface_desc
+[10221.057388] ---------------------------------------------------------
+[10221.058712] src_data            = [ dla_data_cube =>
+[10221.059078]     type          = 2
+[10221.059321]     address       = -1
+[10221.059535]     width         = 8
+[10221.059732]     height        = 8
+[10221.059938]     channel       = 20
+[10221.060172]     size          = 0
+[10221.060383]     line_stride   = 0
+[10221.060609]     surf_stride   = 0
+[10221.060834]     plane_stride  = 0
+[10221.061060] ]
+[10221.061075] x1_data             = [ dla_data_cube =>
+[10221.061507]     type          = 2
+[10221.061705]     address       = -1
+[10221.064308]     width         = 0
+[10221.064561]     height        = 0
+[10221.064791]     channel       = 0
+[10221.065016]     size          = 0
+[10221.065236]     line_stride   = 0
+[10221.065455]     surf_stride   = 0
+[10221.065684]     plane_stride  = 0
+[10221.067269] ]
+[10221.067287] x2_data             = [ dla_data_cube =>
+[10221.067743]     type          = 2
+[10221.067941]     address       = -1
+[10221.068178]     width         = 0
+[10221.068413]     height        = 0
+[10221.068634]     channel       = 0
+[10221.068838]     size          = 0
+[10221.069040]     line_stride   = 0
+[10221.069255]     surf_stride   = 0
+[10221.069476]     plane_stride  = 0
+[10221.069671] ]
+[10221.069691] y_data              = [ dla_data_cube =>
+[10221.072481]     type          = 2
+[10221.072687]     address       = -1
+[10221.072928]     width         = 0
+[10221.073151]     height        = 0
+[10221.073388]     channel       = 0
+[10221.073592]     size          = 0
+[10221.075583]     line_stride   = 0
+[10221.075847]     surf_stride   = 0
+[10221.076046]     plane_stride  = 0
+[10221.076235] ]
+[10221.076257] dst_data            = [ dla_data_cube =>
+[10221.076674]     type          = 0
+[10221.076859]     address       = 6
+[10221.077095]     width         = 8
+[10221.077301]     height        = 8
+[10221.077504]     channel       = 20
+[10221.077731]     size          = 4096
+[10221.079731]     line_stride   = 256
+[10221.079999]     surf_stride   = 2048
+[10221.080241]     plane_stride  = 0
+[10221.080480] ]
+[10221.080495] *********************************************************
+[10221.081029] NVDLA FW ROI[0]: dla_sdp_op_desc
+[10221.081324] ---------------------------------------------------------
+[10221.081723] src_precision    = 1
+[10221.083634] dst_precision    = 1
+[10221.083890] lut_index        = -1
+[10221.084123] out_cvt          =
+[10221.084350] [ scale = 1, truncate = 0, enable = 1, offset = 0 ]
+[10221.084715] conv_mode        = 0
+[10221.084942] batch_num        = 1
+[10221.085187] batch_stride     = 0
+[10221.085407] x1_op            = [ dla_sdp_op =>
+[10221.085710]     enable         = 1
+[10221.087516]     alu_type       = 2
+[10221.087756]     type           = 2
+[10221.087964]     mode           = 0
+[10221.088178]     act            = 1
+[10221.088370]     shift_value    = 0
+[10221.088576]     truncate       = 0
+[10221.088803]     precision      = 1
+[10221.089026]     alu_operand    = 0
+[10221.089257]     mul_operand    = 1
+[10221.089470] cvt.alu_cvt          =
+[10221.089715] [ scale = 0, truncate = 0, enable = 0, offset = 0 ]
+[10221.091883] cvt.mul_cvt          =
+[10221.092144] [ scale = 0, truncate = 0, enable = 0, offset = 0 ]
+[10221.092504] ]
+[10221.092634] x2_op            = [ dla_sdp_op =>
+[10221.092883]     enable         = 0
+[10221.093063]     alu_type       = 2
+[10221.093265]     type           = 0
+[10221.093498]     mode           = 0
+[10221.093730]     act            = 0
+[10221.095535]     shift_value    = 0
+[10221.095798]     truncate       = 0
+[10221.096043]     precision      = 1
+[10221.096284]     alu_operand    = 0
+[10221.096520]     mul_operand    = 0
+[10221.096760] cvt.alu_cvt          =
+[10221.096993] [ scale = 0, truncate = 0, enable = 0, offset = 0 ]
+[10221.097358] cvt.mul_cvt          =
+[10221.097597] [ scale = 0, truncate = 0, enable = 0, offset = 0 ]
+[10221.099554] ]
+[10221.099724] y_op             = [ dla_sdp_op =>
+[10221.100026]     enable         = 0
+[10221.100266]     alu_type       = 2
+[10221.100509]     type           = 0
+[10221.100737]     mode           = 0
+[10221.100955]     act            = 0
+[10221.101188]     shift_value    = 0
+[10221.101434]     truncate       = 0
+[10221.101673]     precision      = 1
+[10221.103623]     alu_operand    = 0
+[10221.103846]     mul_operand    = 0
+[10221.104046] cvt.alu_cvt          =
+[10221.104255] [ scale = 0, truncate = 0, enable = 0, offset = 0 ]
+[10221.104580] cvt.mul_cvt          =
+[10221.104792] [ scale = 0, truncate = 0, enable = 0, offset = 0 ]
+[10221.105163] ]
+[10221.105288] Exit: dla_read_config
+[10221.105510] Exit: dla_prepare_operation status=0
+[10221.105741] Enter: dla_program_operation
+[10221.107637] Program SDP operation index 1 ROI 0 Group[1]
+[10221.108856] no desc get due to index==-1
+[10221.109100] no desc get due to index==-1
+[10221.109359] no desc get due to index==-1
+[10221.109601] no desc get due to index==-1
+[10221.111140] no desc get due to index==-1
+[10221.111397] no desc get due to index==-1
+[10221.111621] Enter: dla_op_programmed
+[10221.111829] Exit: dla_op_programmed
+[10221.112030] Exit: dla_program_operation status=0
+[10221.112293] Enter: dla_enable_operation
+[10221.112528] Enable SDP operation index 1 ROI 0
+[10221.112894] Enter: dla_op_enabled
+[10221.113119] Update dependency operation index 0 ROI 0 DEP_COUNT=1
+[10221.113406] enable Convolution in dla_update_dependency as depdency are resolved
+[10221.115394] Enter: dla_enable_operation
+[10221.115670] Enable Convolution operation index 0 ROI 0
+[10221.116423] Enter: dla_op_enabled
+[10221.116656] Exit: dla_op_enabled
+[10221.116884] Exit: dla_enable_operation status=0
+[10221.117200] Exit: dla_op_enabled
+[10221.117433] Exit: dla_enable_operation status=0
+[10221.117713] Exit: dla_submit_operation
+[10221.119426] Enter: dla_dequeue_operation
+[10221.119716] exit SDP as there's no further operation
+[10221.120039] Exit: dla_dequeue_operation
+[10221.120304] Exit: dla_initiate_processors status=0
+[10229.602067] Enter:dla_handle_events, processor:BDMA
+[10229.602787] Exit:dla_handle_events, ret:0
+[10229.603096] Enter:dla_handle_events, processor:Convolution
+[10229.603425] Handle cdma weight done event, processor Convolution group 0
+[10229.603780] Handle cdma data done event, processor Convolution group 0
+[10229.604140] Handle op complete event, processor Convolution group 0
+[10229.604538] Enter:dla_op_completion processor Convolution group0
+[10229.604874] Completed Convolution operation index 0 ROI 0
+[10229.605210] 1 HWLs done, totally 2 layers
+[10229.605470] Enter: dla_dequeue_operation
+[10229.605732] exit Convolution as there's no further operation
+[10229.606110] Exit: dla_dequeue_operation
+[10229.606325] Exit:dla_op_completion processor Convolution group0 status=0
+[10229.606718] Exit:dla_handle_events, ret:0
+[10229.606981] Enter:dla_handle_events, processor:SDP
+[10229.607283] Handle op complete event, processor SDP group 1
+[10229.607629] Enter:dla_op_completion processor SDP group1
+[10229.607999] Completed SDP operation index 1 ROI 0
+[10229.608314] 2 HWLs done, totally 2 layers
+[10229.608547] Enter: dla_free_op_desc op desc index 0 ROI 0
+[10229.609127] Exit: dla_free_op_desc
+[10229.609348] Enter: dla_free_op_desc op desc index 1 ROI 0
+[10229.610395] Exit: dla_free_op_desc
+[10229.610645] Exit:dla_op_completion processor SDP group1 status=0
+[10229.611005] Exit:dla_handle_events, ret:0
+[10229.611261] Enter:dla_handle_events, processor:PDP
+[10229.611574] Exit:dla_handle_events, ret:0
+[10229.611784] Enter:dla_handle_events, processor:CDP
+[10229.612057] Exit:dla_handle_events, ret:0
+[10229.612283] Enter:dla_handle_events, processor:RUBIK
+[10229.612544] Exit:dla_handle_events, ret:0
+[10229.618280] reset engine done
+Test pass
+#
